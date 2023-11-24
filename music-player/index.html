@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32"  href="favicon-32x32.png">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/euclid-circular-a');
+    </style>
+</head>
+<body>
+
+    <div class="mainDiv">
+        <div class="imgDiv">
+            <img src="img/song-1.jpg">
+        </div>
+
+        <div class="titleDiv">
+            <h2 class="title" id="title">Жизнь</h2>
+            <h3 class="creator" id="creator">Вектор A</h3>
+        </div>
+
+        <audio src="music/song-1.mp3"></audio>
+
+        <div class="progressDiv" id="progressDiv">
+            <div class="progress" id="progress">
+                <div class="progressCircle" id="progressCircle"></div>
+            </div>
+            <div class="timeDiv">
+                <span id="currentTime">0:00</span>
+                <span id="totalTime">2:18</span>
+            </div>
+        </div>
+
+        <div class="musicControlDiv">
+            <i class="icon fa-solid fa-shuffle" id="shuffle"></i>
+            <i class="icon fa-solid fa-backward-step" id="prev"></i>
+            <i class="icon fa-solid fa-circle-play" id="play"></i>
+            <i class="icon fa-solid fa-forward-step" id="next"></i>
+            <i class="icon fa-sharp fa-solid fa-repeat" id="repeat"></i>
+        </div>
+
+        <div id="link">
+            <a href="https://open.spotify.com" target="_blank">Spotify®</a>
+        </div>
+    </div>
+
+<script src="musicPlayer.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url('img/Bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  font-family: 'Euclid Circular A', sans-serif;
+}
+
+.mainDiv {
+  height: 500px;
+  width: 400px;
+  border-radius: 20px;
+  background: #B0534B;
+  background: linear-gradient(180deg, #B0534B, #5A2B27);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.imgDiv {
+  position: relative;
+  top: -50px;
+  left: 50px;
+  height: 300px;
+  width: 300px;
+}
+
+.imgDiv img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 22px 70px 4px;
+}
+
+.titleDiv {
+  color: white;
+  text-align: center;
+}
+
+.title {
+  font-size: 35px;
+  margin: 0;
+}
+
+.creator {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 5px 0px;
+}
+
+.progressDiv {
+  color: white;
+  height: 5px;
+  width: 90%;
+  margin: 30px auto;
+  border-radius: 5px;
+  background-color: #4d4d4d;
+  position: relative;
+}
+
+.progressDiv:hover {
+  cursor: pointer;
+}
+
+.progressDiv:hover .progress {
+  background-color: #1DB954;
+}
+
+.progressDiv:hover .progressCircle {
+  opacity: 0;
+  display: block;
+}
+
+.progress {
+  position: relative;
+  width: 0%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.progressCircle {
+  top: -5px;
+  right: -10px;
+  width: 15px;
+  height: 15px;
+  display: none;
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.progress:hover .progressCircle {
+  opacity: 1;
+}
+
+.progressCircle:hover .progressDiv {
+  opacity: 0;
+}
+
+.timeDiv {
+  top: -30px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.musicControlDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  margin: 0px 20px;
+}
+
+
+/* Music Btns */
+#shuffle {
+  font-size: 25px;
+  color: #b3b3b3;
+}
+
+#shuffle:hover {
+  color: white;
+  cursor: pointer;
+}
+
+#prev {
+  font-size: 25px;
+  color: #b3b3b3;
+}
+
+#prev:hover {
+  color: white;
+  cursor: pointer;
+}
+
+#play {
+  font-size: 45px;
+  color: #b3b3b3;
+  margin-top: -10px;
+}
+
+#play:hover {
+  color: white;
+  cursor: pointer;
+}
+
+#next {
+  font-size: 25px;
+  color: #b3b3b3;
+}
+
+#next:hover {
+  color: white;
+  cursor: pointer;
+}
+
+#repeat {
+  font-size: 25px;
+  color: #b3b3b3;
+}
+
+#repeat:hover {
+  color: white;
+  cursor: pointer;
+}
+
+
+#link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  border: 3px solid transparent;
+  border-radius: 95px;
+  font-size: 40px;
+  text-decoration: none;
+  width: 55%;
+  padding: 5px;
+  margin-top: 145px;
+  margin-left: 90px;
+}
+
+
+
+
+/* Mobile Design */
+@media (max-width:768px) {
+  body {
+    background-image: url('');
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .mainDiv {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+  }
+  
+  .imgDiv {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .imgDiv img {
+    height: 100%;
+    width: 100%;
+    box-shadow: none;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 
+    rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+
+  .titleDiv {
+    position: absolute;
+    left: 5%;
+    top: 63%;
+  }
+
+  .title {
+    font-size: 25px;
+    margin-bottom: 0px;
+  }
+  
+  .creator {
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+  .progressDiv {
+    margin-top: 55%;
+  }
+
+  .timeDiv {
+    margin-top: 50px;
+  }
+
+  .musicControlDiv {
+    margin-top: 55px;
+  }
+
+  #play {
+    font-size: 60px;
+    margin-top: -15px;
+  }
+}
